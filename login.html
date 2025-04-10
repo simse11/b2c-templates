@@ -12,11 +12,16 @@
             padding: 0;
             background-color: #F5F5F5;
             color: #333333;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         .container {
+            width: 100%;
             max-width: 400px;
-            margin: 40px auto;
+            margin: 20px;
             padding: 30px;
             background: white;
             border-radius: 8px;
@@ -29,8 +34,10 @@
         }
 
         .logo {
-            max-width: 150px;
+            height: 60px;
+            width: auto;
             margin-bottom: 20px;
+            object-fit: contain;
         }
 
         h1 {
@@ -40,35 +47,27 @@
             margin-bottom: 20px;
         }
 
-        .form-group {
+        #api {
+            margin-top: 20px;
+        }
+
+        /* Azure B2C spezifische Styles */
+        #api h2 {
+            color: #2B4E72;
+            font-size: 20px;
+            font-weight: 500;
             margin-bottom: 20px;
         }
 
-        label {
-            display: block;
-            margin-bottom: 8px;
-            color: #666666;
-            font-size: 14px;
+        #api .intro {
+            display: none;
         }
 
-        input[type="email"],
-        input[type="password"] {
-            width: 100%;
-            padding: 12px;
-            border: 1px solid #E0E0E0;
-            border-radius: 4px;
-            font-size: 16px;
-            box-sizing: border-box;
+        #api .buttons {
+            margin-top: 24px;
         }
 
-        input[type="email"]:focus,
-        input[type="password"]:focus {
-            outline: none;
-            border-color: #2B4E72;
-            box-shadow: 0 0 0 2px rgba(43,78,114,0.1);
-        }
-
-        button {
+        #api .buttons button {
             background-color: #2B4E72;
             color: white;
             border: none;
@@ -79,96 +78,100 @@
             cursor: pointer;
             width: 100%;
             transition: background-color 0.2s;
+            margin-bottom: 10px;
         }
 
-        button:hover {
+        #api .buttons button:hover {
             background-color: #1A365D;
         }
 
-        .error {
+        #api .entry-item {
+            margin-bottom: 20px;
+        }
+
+        #api .entry-item label {
+            display: block;
+            margin-bottom: 8px;
+            color: #666666;
+            font-size: 14px;
+        }
+
+        #api .entry-item input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #E0E0E0;
+            border-radius: 4px;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+
+        #api .entry-item input:focus {
+            outline: none;
+            border-color: #2B4E72;
+            box-shadow: 0 0 0 2px rgba(43,78,114,0.1);
+        }
+
+        #api .error.itemLevel {
             color: #D32F2F;
             font-size: 14px;
             margin-top: 4px;
         }
 
-        .password-reset {
+        #api .helpLink {
+            display: inline-block;
+            color: #2B4E72;
+            text-decoration: none;
+            font-size: 14px;
+            margin-top: 8px;
+        }
+
+        #api .helpLink:hover {
+            text-decoration: underline;
+        }
+
+        #api .create {
+            text-align: center;
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid #E0E0E0;
+        }
+
+        #api .create p {
+            margin: 0;
+            font-size: 14px;
+            color: #666666;
+        }
+
+        #api .create a {
+            color: #2B4E72;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        #api .create a:hover {
+            text-decoration: underline;
+        }
+
+        #api .password-reset {
             text-align: right;
             margin-top: 8px;
         }
 
-        .password-reset a {
+        #api .password-reset a {
             color: #2B4E72;
             text-decoration: none;
             font-size: 14px;
         }
 
-        .password-reset a:hover {
+        #api .password-reset a:hover {
             text-decoration: underline;
-        }
-
-        #api {
-            margin-top: 20px;
-        }
-
-        .divider {
-            border-top: 1px solid #E0E0E0;
-            margin: 20px 0;
         }
 
         @media (max-width: 600px) {
             .container {
-                margin: 20px;
+                margin: 10px;
                 padding: 20px;
             }
-        }
-
-        .error-page {
-            color: #D32F2F;
-            text-align: center;
-            padding: 20px;
-        }
-
-        .success-page {
-            color: #2E7D32;
-            text-align: center;
-            padding: 20px;
-        }
-
-        /* Azure B2C spezifische Styles */
-        #attributeList ul {
-            padding: 0;
-            margin: 0;
-        }
-
-        #attributeList li {
-            list-style: none;
-            margin-bottom: 16px;
-        }
-
-        .attrEntry {
-            position: relative;
-        }
-
-        .attrEntry .error {
-            color: #D32F2F;
-            font-size: 12px;
-            margin-top: 4px;
-        }
-
-        .buttons {
-            margin-top: 24px;
-        }
-
-        #continue {
-            width: 100%;
-        }
-
-        .intro {
-            display: none;
-        }
-
-        .working {
-            display: none;
         }
     </style>
 </head>
